@@ -1,4 +1,15 @@
+## Suggestion Idea
+
+- Extend `CADToolFactory` to produce a new **Pipe** entity as a product, following the same factory pattern used for Prism, Line, and Circle.
+- When the user selects a **start point** and an **end point**, a dialog prompts for the **slope** and **minimum segment length**.
+- The auto-routing algorithm runs with these inputs and outputs an ordered **list of waypoints**.
+- Each consecutive pair of waypoints is represented as a `CADPrismEntity` (circular profile) or cylinder segment, forming the complete pipe.
+
 ## Class Diagram
+
+**Design notes:**
+- Use the **Factory pattern** (`CADToolFactory`) to produce the new pipe entity as a product
+- The pipe entity is a **container** of pipe segments, each segment is a cylinder entity (`CADPipeSegmentEntity`)
 
 ```mermaid
 classDiagram
@@ -104,6 +115,11 @@ classDiagram
 ```
 
 ## Sequence Diagram
+
+**Workflow:**
+1. User selects start point and end point → a popup dialog asks for **slope** and **minimum pipe length**
+2. Run the auto-routing algorithm (`PipeRouter.ComputeRoute`) → output is a **list of points** (P0..Pn)
+3. From the list of points, represent the pipe as a list of **cylinder entities** (each segment P_i → P_{i+1} becomes a `CADPipeSegmentEntity`)
 
 ```mermaid
 sequenceDiagram
