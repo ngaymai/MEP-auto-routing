@@ -1,0 +1,34 @@
+{
+  "name": "Single Storey",
+  "description": "Simple single-storey layout with one toilet, horizontal routing only — no vertical riser needed.",
+  "building": {
+    "floor_width": 4800,
+    "floor_depth": 3600,
+    "wall_height": 2700,
+    "slab_thickness": 200,
+    "num_storeys": 1
+  },
+  "routing_config": {
+    "pipe_slope": 0.02,
+    "min_pipe_length": 300,
+    "grid_size": 300,
+    "default_diameter": 75,
+    "joist_width": 45,
+    "joist_depth": 300,
+    "joist_d_top": 50,
+    "joist_d_bottom": 50
+  },
+  "main_stack": { "x": 0, "y": 0, "z": 0 },
+  "vent_stack": { "x": 0, "y": 300, "z": 300 },
+  "fixtures": [
+    {
+      "name": "L1_toilet",
+      "type": "toilet",
+      "drain_diameter": 100,
+      "position": { "x": 3600, "y": 2400, "z": 0 },
+      "floor": 1
+    }
+  ],
+  "obstacles": [],
+  "wall_overrides": []
+}

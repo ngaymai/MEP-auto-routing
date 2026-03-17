@@ -1,0 +1,27 @@
+
+============================================================
+  Running model: model_default.json
+============================================================
+
+  Model: Default 3-Storey
+  Building: 4800 x 3600 mm, 3 storey(s)
+  Storeys: 3, Wall height: 2700mm, Slab: 200mm
+  Riser wall: L3_MidY
+  Riser position: (2700, 1800)  (closest to fixture)
+============================================================
+  Cross-Storey Pipe Route (optimized riser)
+============================================================
+  Fixture:     L3 at (3600, 2400)
+  Riser:       L3_MidY at (2700, 1800)
+  Riser exit:  (2700, 1800)
+  Stack:       L1 at (0, 0)
+  Horizontal L3: 1500mm (6 segs)
+  Vertical:      2 segs (0 window detour(s))
+  Horizontal L1: 4500mm (16 segs)
+  Total length:  11921mm
+============================================================
+
+  Riser path:
+    start: (2700, 1800, z=6000)
+    → (2700, 1800, z=3100)  (vertical drop)
+    → (2700, 1800, z=200)  (vertical drop)

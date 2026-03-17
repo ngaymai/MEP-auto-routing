@@ -1,0 +1,55 @@
+{
+  "name": "Default 3-Storey",
+  "description": "Default demo: single toilet on L3, drain routed down to L1 main stack through 3 storeys with floor openings and window avoidance.",
+  "building": {
+    "floor_width": 4800,
+    "floor_depth": 3600,
+    "wall_height": 2700,
+    "slab_thickness": 200,
+    "num_storeys": 3
+  },
+  "routing_config": {
+    "pipe_slope": 0.02,
+    "min_pipe_length": 300,
+    "grid_size": 300,
+    "default_diameter": 75,
+    "joist_width": 45,
+    "joist_depth": 300,
+    "joist_d_top": 50,
+    "joist_d_bottom": 50
+  },
+  "main_stack": { "x": 0, "y": 0, "z": 0 },
+  "vent_stack": { "x": 0, "y": 300, "z": 300 },
+  "fixtures": [
+    {
+      "name": "L3_toilet",
+      "type": "toilet",
+      "drain_diameter": 100,
+      "position": { "x": 3600, "y": 2400, "z": 0 },
+      "floor": 3
+    }
+  ],
+  "obstacles": [
+    {
+      "floor": 3,
+      "min_corner": { "x": 1200, "y": 2100, "z": 0 },
+      "max_corner": { "x": 2700, "y": 2700, "z": 0 }
+    },
+    {
+      "floor": 3,
+      "min_corner": { "x": 300, "y": 900, "z": 0 },
+      "max_corner": { "x": 900, "y": 1500, "z": 0 }
+    }
+  ],
+  "wall_overrides": [
+    {
+      "floor": 2,
+      "wall": "East",
+      "windows": [
+        { "offset": 600,  "width": 900, "z_bottom": 900, "height": 1200 },
+        { "offset": 2100, "width": 900, "z_bottom": 900, "height": 1200 },
+        { "offset": 1200, "width": 600, "z_bottom": 900, "height": 1200 }
+      ]
+    }
+  ]
+}
